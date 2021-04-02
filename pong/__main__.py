@@ -6,11 +6,11 @@ score_a = 0
 score_b = 0
 
 # Windows
-wn = turtle.Screen()
-wn.title("Pong")
-wn.bgcolor("black")
-wn.setup(width=800, height=600)
-wn.tracer(0)
+win = turtle.Screen()
+win.title("Pong")
+win.bgcolor("black")
+win.setup(width=800, height=600)
+win.tracer(0)
 
 # Paddle A
 paddle_a = turtle.Turtle()
