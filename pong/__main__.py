@@ -1,5 +1,7 @@
 import turtle
-import os
+from functools import partial
+
+from .utils import paddle_up, paddle_down
 
 # Initialize the scores
 score_a = 0
@@ -49,3 +51,12 @@ pen.penup()
 pen.hideturtle()
 pen.goto(0, 260)
 pen.write("Player A: 0  Player B: 0", align="center", font=("Courier", 24, "normal"))
+
+# Keyboard bindings
+win.listen()
+
+win.onkeypress(partial(paddle_up, paddle_a), "w")
+win.onkeypress(partial(paddle_down, paddle_a), "s")
+
+win.onkeypress(partial(paddle_up, paddle_b), "Up")
+win.onkeypress(partial(paddle_down, paddle_b), "Down")
